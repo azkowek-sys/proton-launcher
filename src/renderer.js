@@ -1,7 +1,7 @@
 'use strict';
 
 // ── Data ────────────────────────────────────────────────────────────────────
-let instances = JSON.parse(localStorage.getItem('pl-instances') || 'null') || [
+let instances =  [
   { id: 1, name: '1.21.4 Vanilla',  ver: '1.21.4', loader: 'vanilla',  icon: '🌿', color: '#2d4a2d', fav: false },
   { id: 2, name: 'Create Modpack',  ver: '1.20.1', loader: 'forge',    icon: '⚙️',  color: '#2a3a5a', fav: true  },
   { id: 3, name: 'Performance',     ver: '1.21.4', loader: 'fabric',   icon: '⚡',  color: '#4a3a1a', fav: false },
@@ -29,7 +29,7 @@ let gridView     = true;
 let nextId       = Math.max(...instances.map(i => i.id), 0) + 1;
 let newInstData  = { name: 'New Instance', ver: '1.21.4', loader: 'vanilla', icon: '🌿', color: '#2d4a2d' };
 
-function saveInstances() { localStorage.setItem('pl-instances', JSON.stringify(instances)); }
+function saveInstances() { }
 
 // ── Render ────────────────────────────────────────────────────────────────────
 function filteredInstances() {
